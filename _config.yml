@@ -19,4 +19,4 @@ port: 8080
 title: Spencer Tiberi
 exclude: [vendor]
 
-theme: jekyll-theme-hacker
+theme: jekyll-theme-midnight
