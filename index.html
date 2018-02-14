@@ -1,10 +1,115 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <title>Google+ JavaScript Quickstart</title>
+  <!-- JavaScript specific to this application that is not related to API
+     calls -->
+     
+  <style>
+  body  {
+      //background-image: url("https://upload.wikimedia.org/wikipedia/en/5/57/Belmont_Hill_School_Seal.png");
+      background-color: #e6e6e6;
+      background-size: 150px
+       ;
 
-<html> 
-	<head>
-		<title>Hello, head</title>
-	</head>
-	<body>
-		Hello, body
-	</body>
-</html>
+  }
+
+  .button {
+      background-color: #003399; /* Green */
+      border: #000000;
+      border-style: solid;
+      border-width: 7px;
+      width: 25%;
+      height: 100px;
+      padding: 15px 32px;
+      text-align: center;
+      border-radius: 15px;
+      float: left;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 30px;
+      margin: 100px 1%;
+      cursor: pointer;
+      text-shadow: 1px 1px;
+      color: #000000
+  }
+
+  .button2 {background-color: #008CBA;} /* Blue */
+  .button3 {background-color: #f44336;} /* Red */ 
+  .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+  .button5 {background-color: #555555;} /* Black */
+  .div {margin: 5% 15%;}
+  </style>
+
+  <!-- button onclick="click()" id="ShowButton" type="button">Click Me!</button>  
+<script>
+  function click () {
+    console.log('click');
+    document.getElementById('ShowButton').Text = 'Show filter';
+
+
+  }
+
+</script> -->
+<div class="div">
+	<button class="button" onclick="myFunction()" id="ShowButton">OFF</button>
+
+	<button class="button" onclick="myFunction2()" id="ShowButton2">OFF</button>
+
+	<button class="button" onclick="myFunction3()" id="ShowButton3">OFF</button>
+</div>
+
+
+<!--p id="demo"></p-->
+
+<script>
+i = 0;
+m = 0;
+n = 0;
+function myFunction() {
+
+	if (i == 0) {
+    	document.getElementById("ShowButton").innerHTML = "ON";
+    	document.getElementById("ShowButton").style.background = "#ffff66";
+    	i = 1;
+	} else {
+		document.getElementById("ShowButton").innerHTML = "OFF"
+		document.getElementById("ShowButton").style.background = "#003399";
+		i = 0;
+	}
+}
+function myFunction2() {
+
+	if (m == 0) {
+		document.getElementById("ShowButton2").innerHTML = "ON";
+		document.getElementById("ShowButton2").style.background = "#ffff66";
+
+
+		m =1;
+	} else {
+		document.getElementById("ShowButton2").innerHTML = "OFF"
+		document.getElementById("ShowButton2").style.background = "#003399";
+
+		m = 0;
+	}
+}
+function myFunction3() {
+
+	if (n == 0) {
+		document.getElementById("ShowButton3").innerHTML = "ON";
+		document.getElementById("ShowButton3").style.background = "#ffff66";
+
+		n =1;
+	} else {
+		document.getElementById("ShowButton3").innerHTML = "OFF"
+		document.getElementById("ShowButton3").style.background = "#003399";
+
+		n = 0;
+	}
+}
+</script>
+</head>
+<body>
+    
+</script>
+<script type="text/javascript">
