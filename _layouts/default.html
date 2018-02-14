@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+{% assign title = page.title | default: site.title %}
+{% assign description = page.description | default: site.description %}
+
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+    <head>
+
+        <meta charset="utf-8"/>
+        <meta name="description" content="{{ description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <meta property="og:description" content="{{ description }}"/>
+        <meta property="og:image" content="TODO"/>
+        <meta property="og:title" content="{{ title }}"/>
+
+        <link rel="icon" href="{{ site.baseurl }}/assets/stwhitelogo.png"/>
+
+        <script>
+            var date = new Date();
+            var hours = date.getHours();
+            var month = date.getMonth();
+            var end = 18;
+            var begin = 6;
+            if (month < 4 || month > 10) {
+                end = 17;
+                begin = 7;
+            }
+            if (hours < begin || hours > end) {
+                document.write("<link rel=\"stylesheet\" href=\"{{ site.baseurl }}/css/nightstyles.css\"/>");
+            }
+            else {
+                document.write("<link rel=\"stylesheet\" href=\"{{ site.baseurl }}/css/styles.css\"/>");
+            }
+        </script>
+
+        <title>{{ title }}</title>
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <a href="{{ "/" | relative_url }}"><img class="logo" src="{{ site.baseurl }}/assets/st.png"></a>
+            <div class="col-sm-6">
+                <ul class="std-nav rightjust">
+                    <li><a href="{{ site.baseurl }}/bio" {% if page.url == "/bio/" %} class="active" {% endif %}> bio </a></li>
+                    <li><a href="{{ site.baseurl }}/projects" {% if page.url == "/projects/" %} class="active" {% endif %}> projects </a></li>
+                    <li><a href="{{ site.baseurl }}/resume" {% if page.url == "/resume/" %} class="active" {% endif %}> resume </a></li>
+                    <!--<li><a href="{{ site.baseurl }}/blog" {% if page.url == "/blog/" or page.layout == "post" %} class="active" {% endif %}> blog </a></li>-->
+                    <li><a href="{{ site.baseurl }}/contact" {% if page.url == "/contact/" %} class="active" {% endif %}> contact </a></li>
+                </ul>
+            </div>
+            <div class="mobile-nav">
+                <a href="{{ site.baseurl }}/bio" {% if page.url == "/bio/" %} class="active" {% endif %}> bio </a> |
+                <a href="{{ site.baseurl }}/projects" {% if page.url == "/projects/" %} class="active" {% endif %}> projects </a> |
+                <a href="{{ site.baseurl }}/resume" {% if page.url == "/resume/" %} class="active" {% endif %}> resume </a> |
+                <!-- <a href="{{ site.baseurl }}/blog" {% if page.url == "/blog/" or page.layout == "post" %} class="active" {% endif %}> blog </a> | -->
+                <a href="{{ site.baseurl }}/contact" {% if page.url == "/contact/" %} class="active" {% endif %}> contact </a>
+            </div>
+            <div class="col-sm-6">
+                <div class="container-fluid markdown-body">
+                    <div class="name"><a href="{{ "/" | relative_url }}"> {{ site.title }} </a></div>
+                    Think. Create. Teach.
+                    <div class="scroll">
+                    {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- https://code.jquery.com/ -->
+        <script>
+            {% include jquery-3.2.1.min.js %}
+        </script>
+
+        <!-- https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js -->
+        <script>
+            {% include bootstrap.min.js %}
+        </script>
+
+        {% if jekyll.environment == "production" and site.google_analytics %}
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', '{{ site.google_analytics }}', 'auto');ga('send', 'pageview');
+           </script>
+       {% endif %}
+    </body>
+</html>

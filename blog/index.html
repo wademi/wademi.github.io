@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% assign max = 15 %}
+{% assign counter = 0 %}
+
+{% if site.posts.size < max %}
+  {% assign max = site.posts.size %}
+{% endif %}
+
+{% for post in site.posts %}
+    {% assign counter = counter | plus: 1 %}
+      <a href="{{ post.url }}" class="blogpost"> {{ post.title }} ({{ post.date | date: "%b %d, %Y"}}) <a>
+    {% if counter < max %}
+      |
+    {% endif %}
+{% endfor %}
