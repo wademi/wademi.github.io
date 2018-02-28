@@ -28,4 +28,14 @@
 
 table {
     text-align: center;
+    /*border-collapse: collapse;*/
+
+}
+th {
+    font-size: 20px;
+    padding: 10px;
+}
+
+th, td {
+    border: 2px solid black;
 }
