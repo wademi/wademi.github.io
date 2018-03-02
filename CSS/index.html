@@ -5,6 +5,7 @@
 		<link href="../css.css" rel="stylesheet"/>
 		<title>HTML+CSS</title>
 		<link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2000px-HTML5_logo_and_wordmark.svg.png">
+		<script type="text/javascript" src="../include.js"></script>
 	</head>
 	<body>
 		<div class="topnav">
@@ -18,40 +19,9 @@
 		  <a href="https://reference.cs50.net/" target="_blank">Reference50</a>
 
 		</div>
-		<table border="5" align="center">
-			<tr>
-				<th>
-					<a href="https://www.w3schools.com/css/default.asp" target="_blank">css</a>
-				</th>
-				<th>
-					<a href="https://www.w3schools.com/css/default.asp" target="_blank">css-0</a>
-				</th>
-			</tr>
-			<tr>
-				<td>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/kg0ZOmUREwc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				</td>
-				<td>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/TKZlfZDF8Y4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				</td>
-			</tr>
-			<tr>
-				<th>
-					<a href="https://www.w3schools.com/css/default.asp" target="_blank">css-1</a>
-				</th>
-				<th>
-					<a href="https://www.w3schools.com/css/default.asp" target="_blank">css-2</a>
-				</th>
-			</tr>
-			<tr>
-				<td>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/VwCSw2ts388?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				</td>
-				<td>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/-7wiXVMh4XY?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				</td>
-			</tr>
-		</table>
-
+		<div w3-include-html="CSS_Table.html"></div>
+		<script>
+			includeHTML();
+		</script>
 	</body>
 </html>
