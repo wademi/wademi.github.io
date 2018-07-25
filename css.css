@@ -22,9 +22,11 @@ a {
 }
 
 #title {
+    /*border: 2px solid white;*/
     padding: 50px;
+    padding-right: 0px;
     padding-bottom: 5px;
-    font-size: 50px;
+    font-size: 75px;
     color: green;
     font-weight: bold;
 }
