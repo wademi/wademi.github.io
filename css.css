@@ -1,10 +1,39 @@
 head {
 
 }
-a {
+body {
+    height: fill;
+    width: fill;
+    background: black;
+    /*background-image: url("download-1.png");*/
+    background-repeat: no-repeat;
+}
+table {
+    padding-top:50px;
+    align-content: center;
+    /*border: 2px solid white;*/
+    height: 100%;
+    width: 100%;
+}
+#title {
+    padding: 50px;
+    padding-bottom: 5px;
     font-size: 50px;
-    color: black;
-    text-align: center;
-    width: fill%;
-    height: fill%;
+    color: green;
+    font-weight: bold;
+}
+#name {
+    text-indent: 75px;
+    font-size: 30px;
+    color: blue;
+    font-weight: bold;
+
+}
+#school {
+    text-indent: 75px;
+    font-size: 20px;
+    color: gold;
+    font-weight: bold;
+    padding-bottom:100px;
+
 }
